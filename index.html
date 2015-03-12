@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Sokrator</title>
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-sortable-master/ng-sortable.min.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body my-background-image>
+<div id="fb-root"></div>
+<script></script>
+<div id="cos" ng-view></div>
+    
+    
+<footer class="navbar-fixed-bottom">
+<div style="padding:8px 25px; font-size:12px; text-align:right; color:#666;"> Copyright 2014 Sokrator. </div>
+</footer>    
+    
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+ <!-- <script src="bower_components/angular-file-upload/angular-file-upload-shim.js"></script> -->
+  <script src="bower_components/ng-file-upload/angular-file-upload-shim.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>  
+  <script type="text/javascript" src="bower_components/ng-sortable-master/ng-sortable.js"></script>
+  <!--<script src="bower_components/angular/angular.js"></script>-->
+  <script src="bower_components/ng-file-upload/angular-file-upload.min.js"></script> 
+  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="js/directives.js"></script>
+  <!--<script src="bower_components/angular-file-upload/angular-file-upload.js"></script> -->
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-linkify-master/angular-linkify.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="modules/perfil/controllers.js"></script>
+  <script src="modules/users/controllers.js"></script>
+  <script src="modules/skapps/controllers.js"></script>
+  <script src="modules/skapps/GMail/controllers.js"></script>
+  <script src="modules/skapps/GDrive/controllers.js"></script>
+  <script src="modules/skapps/Moodle/controllers.js"></script>
+  <script src="modules/skapps/Facebook/controllers.js"></script>
+  <script src="modules/skapps/Twitter/controllers.js"></script>
+  <script src="modules/skapps/Tools/controllers.js"></script>
+  <script src="modules/skapps/Favourites/controllers.js"></script>
+  <script src="modules/skapps/RSS/controllers.js"></script>
+  <script src="modules/skapps/WebSAT/controllers.js"></script>
+  <script src="modules/skapps/WebIns/controllers.js"></script>
+  <script src="modules/skapps/Alexandria/controllers.js"></script>
+  <script src="modules/skapps/Minimax/controllers.js"></script>
+  <script src="modules/skapps/WebSec/controllers.js"></script>
+  <script src="modules/skapps/CRM/controllers.js"></script>
+  <script src="modules/skapps/Infomedia/controllers.js"></script>
+  <script src="modules/skapps/Analytics/controllers.js"></script>
+  <script src="modules/skapps/YouTube/controllers.js"></script>
+  <script src="modules/login/controllers.js"></script>
+  <script src="modules/skconfig/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ui-bootstrap.js"></script>
+
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/moment/lang/ca.js"></script>
+  <script src="bower_components/moment/lang/es.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies-1.0.0rc10.js"></script>
+  <script src="bower_components/angular-utf8-base64/angular-utf8-base64.js"></script>
+  
+  
+  <!-- imatge de fons  -->
+  <script src="js/jquery.backstretch.min.js"></script>
+  <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#menu-toggle").toggleClass("toggled");
+    });
+	$(document).ready(function(e){
+		if (window.location.href.indexOf("index.html?code=")>0) {
+			var direc=window.location.href;
+			var posleft=direc.substr(0,direc.indexOf("index.html?code="));
+			var posright=direc.substr(direc.indexOf("e=")+2);
+			var posright=posright.substr(0,posright.length-5);
+			//window.location.href=posleft+"/#/facebookreturn/"+posright;
+			window.location.href=posleft+"#/skconfig/facebookreturn/"+posright;
+		}		
+		
+	//$.backstretch("img/abstract-widescreen-wallpapers.jpg");
+	/*$.backstretch([
+		"/img/P1010480.jpg",
+		
+	  
+	  "/img/file3831271188427.jpg",
+	  "/img/blue-smoke-background.jpg",
+	  
+	  "/img/file000196280051.jpg",
+	  "/img/color.jpg",
+	  "/img/SDRandCo.JPG",
+	  "/img/DSCN5269.jpg"],
+	  
+	 {duration: 3000, fade: 750});
+	*/
+	});
+	
+    </script>
+ 
+</body>
+</html>

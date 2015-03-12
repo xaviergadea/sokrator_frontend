@@ -1,0 +1,80 @@
+'use strict';
+
+/* Controllers */
+
+angular.module('myApp.controllers', ['angularMoment'])
+  .controller('MyCtrl1', ['$scope','$http', function($scope,$http) {
+    var url = 'http://v1-back.sokrato.me127.0.0.1:3000/skappsREST';// URL where the Node.js server is running	
+      $http.get(url).success(function(data) {
+          
+		$scope.users = data;
+	  });
+      
+  }])
+  .controller('MyCtrl2', ['$scope','$http', function($scope,$http) {
+    var url = 'http://127.0.0.1:3000/AuserREST';// URL where the Node.js server is running	
+      $http.get(url).success(function(data) {          
+          $scope.users = data;
+	  });
+
+  }])
+ .controller('NewUserCtrl', ['$scope','$http', '$location', function ($scope,$http,$location) {   
+     
+     $scope.newUser = function() {
+        //console.log($scope.form);
+        var url = 'http://127.0.0.1:3000/newuserREST';// URL where the Node.js server is running	
+        $http({
+            method: 'POST',
+            url:url,
+            data:$scope.form
+            })
+            .success(function (data) {
+                $location.path('/skusers')
+            })
+            .error(function(data) {
+                console.log("Erro: "+data);
+            })
+        };
+        
+ }])
+
+.controller('EditUserCtrl', ['$scope','$http', '$location','$routeParams', function ($scope,$http,$location,$routeParams) {   
+    var url = 'http://127.0.0.1:3000/AuserREST/'+$routeParams.id;// URL where the Node.js server is running	
+    $http.get(url).success(function(data) {    
+        
+        var now = moment(data.birthdate); 
+        
+        //now=new Date(anyo, mes, dia);
+        //return now;
+        now=now.format("DD/MM/YYYY");
+        //now=new Date(anyo, mes, dia).toDateInputValue();
+        //console.log(now);
+        data.birthdate=now;
+      $scope.user = data;
+    });
+ }])
+ .controller('UserOperations', ['$scope','$http', '$location', function ($scope,$http,$location) {   
+    $scope.deleteUser = function() {
+        if (confirm("Realment vols eliminar el registre?")) {
+            var url = 'http://127.0.0.1:3000/deleteuserREST/'+this.user._id;// URL where the Node.js server is running	
+            $http.get(url).success(function(data) {          
+                $scope.users = data;
+            });
+        }
+    },
+    $scope.editUser = function() {
+        var url = 'http://127.0.0.1:3000/edituserREST/'+this.user._id;// URL where the Node.js server is running	
+        $http({
+            method: 'POST',
+            url:url,
+            data:$scope.user
+            })
+            .success(function (data) {
+                $location.path('/skusers')
+            })
+            .error(function(data) {
+                console.log("Erro: "+data);
+            })
+        };
+    
+ }]);

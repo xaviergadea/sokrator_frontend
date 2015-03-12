@@ -1,0 +1,28 @@
+<div class="sidebar-brand fixed">
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-external-link"></i></button>
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-gear"></i></button>
+<a class="btn btn-link btn-xs pull-right" href="http://insmontserrat.docus.info/" target="_blank"><i class="fa fa-eye"></i></a>
+<button class="btn btn-link btn-xs pull-right" ng-click="RefreshMoodle();"><i class="fa fa-refresh"></i></button>
+<img src="http://v1-back.sokrato.me/images/icMoodle.png" /> Moodle</div><div class="panellapp">
+  <ul class="sidebar-nav">
+  	<img id="spinnerMoodle" ng-src="img/spinner.gif">
+    <li ng-repeat="MoodleEv in MoodleEvents | filter:searchText">
+      <div>{{MoodleEv.timestart * 1000 | date:'dd-MM-yyyy hh:mm'}}</div>
+      <a ng-href="{{course.fullname}}" target="_blank" class="gmailSubject" ng-click="toggleMoodleEvent()">{{MoodleEv.name}}</a>      
+    </li>
+  </ul>
+</div>
+<div class="modal fade" id="divReadMoodleEvent">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Tancar</span></button>
+        <h4 class="modal-title">Missatge</h4>
+      </div>
+      <div class="modal-body" id="MoodleBodyEvent"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tancar</button>        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>

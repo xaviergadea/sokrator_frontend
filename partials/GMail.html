@@ -1,0 +1,38 @@
+<div class="sidebar-brand">
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-external-link"></i></button>
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-gear"></i></button>
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-eye"></i></button>
+<button class="btn btn-link btn-xs pull-right" ng-click="RefreshGmail();"><i class="fa fa-refresh"></i></button>
+<img src="http://v1-back.sokrato.me/images/icGmail.png" />Gmail</div>
+<div class="panellapp">
+	<ul class="gmail-nav"> 
+    	<img id="spinnerGmail" ng-src="img/spinner.gif">
+    	<li ng-repeat="mail in mails | filter:searchText"><a href="javascript:void(0);" class="gmailMail" ng-click="toggleMail()">
+        <div ng-repeat="mailItem in mail.labelIds" ng-hide="{{mailItem!='UNREAD'}}" style="float:left; color:#428bca; margin-right:10px;"><span class="fa fa-envelope" aria-hidden="true"></span></div>
+        <div class="gmailBSH"><i class="fa fa-plus-square-o text-info"></i></div>
+            <div>
+            	<div ng-repeat="mailItem in mail.payload.headers" ng-hide="{{mailItem.name!='Date'}}" class="gmailData">{{mailItem.value | fromNow}}</div>
+                <div ng-repeat="mailItem in mail.payload.headers" ng-hide="{{mailItem.name!='From'}}" class="gmailRemitent">{{mailItem.value}}</div>
+                
+                <div ng-repeat="mailItem in mail.payload.headers" ng-hide="{{mailItem.name!='Subject'}}" class="gmailSubject">{{mailItem.value}}</div>
+                
+                
+            </div>
+        </a></li>
+    </ul>
+</div>
+<div class="modal fade" id="divReadGmailMessage">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Tancar</span></button>
+        <h4 class="modal-title">Missatge</h4>
+      </div>
+      <div class="modal-body" id="bodyMessage">        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tancar</button>        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>

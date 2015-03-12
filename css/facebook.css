@@ -1,0 +1,42 @@
+/* CSS Document */
+.facebookPost{}
+.facebookBSH{float:right; color:#36C; padding:0px 0px;}
+.facebookRemitent{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;font-size:12px; color:#3B5998; font-weight:bold;}
+.facebookFoto{padding:3px; border:1px solid #ddd;}
+.facebookFoto img{width:100%;}
+.facebookStory{font-size:11px; color:#111; margin:1px 0px 0px 0px;}
+.facebookMessage{color:#666;font-size:13px; margin:2px 0px 8px 0px;}
+.facebook-nav {
+    /*position: absolute;
+    top: 0;
+    width: 100%;*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.facebook-nav li {
+    /*text-indent: 20px;*/
+    line-height: 18px;
+	font-size:14px;
+	border-top: 1px solid rgba(0, 0, 0, .06);
+}
+
+.facebook-nav li.facebookPost {
+	
+    display: block;
+    text-decoration: none;
+    color: #272727;
+	padding:10px 20px 10px 20px;
+}
+
+.facebook-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(31,33,47,0.1);
+}
+.facebook-nav li:first-child{border-top:none;}
+.facebook-nav li a:active,
+.facebook-nav li a:focus {
+    text-decoration: none;
+}

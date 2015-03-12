@@ -1,0 +1,19 @@
+<div class="sidebar-brand">
+    <button class="btn btn-link btn-xs pull-right"><i class="fa fa-external-link"></i></button>
+    <button class="btn btn-link btn-xs pull-right"><i class="fa fa-gear"></i></button>
+    <button class="btn btn-link btn-xs pull-right"><i class="fa fa-eye"></i></button>
+    <button class="btn btn-link btn-xs pull-right" ng-click="RefreshTwitter();"><i class="fa fa-refresh"></i></button>
+    <img src="http://v1-back.sokrato.me/images/icTwitter.png" />Twitter
+</div>
+<div class="panellapp">
+	<ul class="twitter-nav"> 
+    	<img id="spinnerTwitter" ng-src="img/spinner.gif">
+    	<li ng-repeat="TWItem in TWItems | filter:searchText" class="twitterRegistre">
+          <div class="twitterIco"><img src="{{TWItem.retweeted_status.user.profile_image_url && TWItem.retweeted_status.user.profile_image_url || TWItem.user.profile_image_url}}" alt="{{TWItem.user.name}}" ></div>
+          <small>{{TWItem.created_at | fromNow}}</small>
+          <div ng-show="{{TWItem.retweeted_status.id}}"><div class="glyphicon glyphicon-transfer">&nbsp;</div><a href="https://twitter.com/{{TWItem.user.screen_name}}" target="_blank">{{TWItem.user.name}}</a> <small>ha retwitteado</small></div>
+          <div class="twitterNom" linkify="twitter">{{TWItem.retweeted_status.user.name && TWItem.retweeted_status.user.name || TWItem.user.name}} <span class="text-muted">@{{TWItem.retweeted_status.user.screen_name && TWItem.retweeted_status.user.screen_name || TWItem.user.screen_name}}</span></div>
+          <div class="twitterSubject" linkify="twitter">{{TWItem.text}}</div>
+        </li>        
+    </ul>
+</div>

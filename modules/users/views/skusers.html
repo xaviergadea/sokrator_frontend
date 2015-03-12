@@ -1,0 +1,30 @@
+<div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">            
+        <li class="active"><a href="/skusers">Usuaris</a></li> 
+        <li><a href="/skapps">Aplicacions</a></li>            
+    </ul>
+</div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <a href="#/skusers/new" class="btn btn-primary" role="button">Nou usuari</a>
+    <table class="table table-striped">
+      <thead>
+        <tr>      
+          <th>Nom personal</th>
+          <th>Nom usuari</th>
+          <th>Data</th>
+          <th>Administrador</th>
+          <th>#</th>
+        </tr>
+      </thead>
+      <tbody class="" ng-controller="UserOperations">
+        
+        <tr ng-repeat="user in users">
+          <td>{{user.name}}</td>
+          <td>{{user.userName}}</td>
+          <td>{{user.birthdate | date:'dd-MM-yyyy'}}</td>
+          <td>{{user.isAdmin}}</td>
+          <td><a href="#/skusers/edit/{{user._id}}" class="btn btn-primary" role="button">Editar</a><button ng-click=deleteUser()  class="btn btn-warning" role="button">Esborrar</button></td>      
+        </tr>          
+      </tbody>
+    </table>
+</div>

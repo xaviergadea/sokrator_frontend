@@ -1,0 +1,46 @@
+/* CSS Document */
+.einesRegistre{}
+.einesBSH{float:right; color:#36C; padding:15px 10px;}
+.einesNom{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;font-size:14px; color:#000; font-weight:800; margin-left:60px}
+.einesData{font-size:10px; float:right;}
+.einesSubject{color:#666;font-size:12px; margin-left:60px}
+.eines-nav {
+    /*position: absolute;
+    top: 0;
+    width: 100%;*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.eines-nav li {
+    /*text-indent: 20px;*/
+    line-height: 18px;
+	font-size:14px;
+	border-top: 1px solid rgba(0, 0, 0, .06);
+}
+.eines-nav li img{
+float:left;
+margin-right:15px;
+max-height:45px;
+}
+
+.eines-nav li a.einesRegistre {
+	
+    display: block;
+    text-decoration: none;
+    color: #272727;
+	padding:10px 20px 10px 15px;
+	overflow:auto;
+}
+
+.eines-nav li a.einesRegistre:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(31,33,47,0.1);
+}
+.eines-nav li:first-child{border-top:none;}
+.eines-nav li a.einesRegistre:active,
+.eines-nav li a.einesRegistre:focus {
+    text-decoration: none;
+}

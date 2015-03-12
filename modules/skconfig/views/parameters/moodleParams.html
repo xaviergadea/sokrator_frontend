@@ -1,0 +1,33 @@
+<div class="modal fade" id="moodleParams">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Tancar</span></button>
+        <h4 class="modal-title">Escriu els par&agrave;metres d'activaci&oacute; de l'aplicaci&oacute;</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" class="FormAppsConfig">
+          <!--<input type="hidden" name="routeAuth" id="routeAuth" />-->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nom d'usuari</label>
+            <input type="email" required="required" class="form-control" id="Moodleusername" placeholder="Nom d'usuari">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contrasenya</label>
+            <input type="password" required="required" class="form-control" id="Moodlepassword" placeholder="Contrasenya">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">Ruta del teu moodle</label>
+            <input type="text" required="required" class="form-control" id="Moodleroute" placeholder="Ruta del teu moodle">
+            <p class="help-block">Escriu aquí la URL del moodle del teu centre (http://elteumoodle.org)</p>
+          </div>                                      
+         
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tancar</button>
+        <button type="submit" id="btOkActivate" class="btn btn-primary">Activar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>

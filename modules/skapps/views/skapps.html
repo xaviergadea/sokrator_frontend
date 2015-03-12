@@ -1,0 +1,123 @@
+<div ng-controller="skappConnect">
+<header class="navbar navbar-fixed-top cabesa">
+<div class="botonera">
+<a href="javascript:void(0)" class="pestana Act"><span class="fa fa-home">&nbsp;</span></a>
+<a href="/skconfig" class="pestana"><span class="fa fa-th">&nbsp;</span></a>
+<a href="/skprofile" class="pestana"><span class="fa fa-user">&nbsp;</span></a>
+<a href="javascript:void(0);" id="initSearch" class="pestana"><span class="fa fa-search"></span></a>
+</div>
+<inituserprofile></inituserprofile>
+</header>
+
+    <div id="wrapper">
+    <div class="cercador">
+    <div class="row">
+        <div class="col-md-12">
+        <form role="form" style="padding:20px 200px;">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="searchText">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+          </span>
+        </div><!-- /input-group -->
+        </form>
+        </div>
+    </div>
+</div>
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+        
+     	<div class="iconesapp">
+        <!-- a href="javascript:void(0);" id="menu-toggle" class="pestana"><span class="fa fa-th"></span></a-->
+      
+        <ul class="iconesapp-list">
+            <a href="#/skconfig"><li class="iconesAdd">
+              <img src="{{url}}images/icAddApp.png"/>
+            </li></a>
+            
+           <div ng-repeat="app in apps" ng-hide="{{!app.active}}" class="btn-group" ><li data-toggle="dropdown" class="icones"><a href="javascript:void();"><img src="{{url}}images/{{app.image}}"/></a></li>
+            <div class="dropdown-menu" role="menu">
+            	<div class="arrow"></div>
+                <a href="javascript:void(0);" class="zonaApp" ng-click="viewFilesapp(1)"> </a>
+                <a href="javascript:void(0);" class="zonaApp" ng-click="viewFilesapp(2)"> </a>
+                <a href="javascript:void(0);" class="zonaApp" ng-click="viewFilesapp(3)"> </a>
+            </div>
+            
+            </div>
+            
+            <!------ APLICACIONS RECOMANADES --->
+            <div ng-repeat="app in appsR" ng-hide="{{!app.active}}" class="btn-group" ><li data-toggle="dropdown" class="icones"><a href="javascript:void();"><img src="{{url}}images/{{app.image}}"/></a></li>
+            <div class="dropdown-menu" role="menu">
+            	<div class="arrow"></div>
+                <a href="javascript:void(0);" class="zonaApp" ng-click="viewFilesapp(1)"> </a>
+                <a href="javascript:void(0);" class="zonaApp" ng-click="viewFilesapp(2)"> </a>
+                <a href="javascript:void(0);" class="zonaApp" ng-click="viewFilesapp(3)"> </a>
+            </div>
+            
+            </div>
+            <!--<a href="javascript:void(0)" ng-repeat="app in apps"><li ng-click="(app.active) ? viewFilesapp() : connectapp();">
+              <span class="icones"><img src="{{url}}images/{{app.image}}"/></span>
+            </li></a>-->
+            
+           
+        </ul>
+  	   </div>
+       
+       
+       
+       
+       
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+       <!-- <ul data-as-sortable="board.dragControlListeners" data-ng-model="items">
+           <li data-as-sortable-item class="col-lg-4 col-sm-6 panelera" id="panelera1">
+              <div data-as-sortable-item-handle><appsinitialposition1></appsinitialposition1></div>
+           </li>
+        </ul>
+        <ul data-as-sortable="board.dragControlListeners" data-ng-model="items">
+           <li data-as-sortable-item class="col-lg-4 col-sm-6 panelera">
+              <div data-as-sortable-item-handle><appsinitialposition2></appsinitialposition2></div>
+            </li>
+        </ul>
+        <ul data-as-sortable="board.dragControlListeners" data-ng-model="items">
+            <li data-as-sortable-item class="col-lg-4 col-sm-6 panelera">
+              <div data-as-sortable-item-handle><appsinitialposition3></appsinitialposition3></div>
+           </li>
+        </ul>-->
+            <div class="container-fluid">
+            	  <div class="row">
+                    <div class="col-lg-4 col-sm-6 panelera" id="panelera1">
+                    	<appsinitialposition1></appsinitialposition1>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 panelera">
+                    
+                    	<appsinitialposition2></appsinitialposition2>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 panelera">
+                    	<!-- con esto cargamos la directiva dir-template -->
+						          <appsinitialposition3></appsinitialposition3>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+ </div>
+
+</div>
+
+<script>
+
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("toggled");
+	$("#menu-toggle").toggleClass("toggled");
+});
+
+</script>

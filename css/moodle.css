@@ -1,0 +1,40 @@
+/* CSS Document */
+.moodleMail{}
+.moodleBSH{float:right; color:#36C; padding:15px 10px;}
+.moodleRemitent{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;font-size:14px; color:#000; font-weight:500;}
+.moodleData{font-size:10px; float:right;}
+.moodleSubject{color:#666;font-size:12px;}
+.moodle-nav {
+    /*position: absolute;
+    top: 0;
+    width: 100%;*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.moodle-nav li {
+    /*text-indent: 20px;*/
+    line-height: 18px;
+	font-size:14px;
+	border-top: 1px solid rgba(0, 0, 0, .06);
+}
+
+.moodle-nav li a.moodleMail {
+	
+    display: block;
+    text-decoration: none;
+    color: #272727;
+	padding:10px 40px 10px 25px;
+}
+
+.moodle-nav li a.moodleMail:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(31,33,47,0.1);
+}
+.moodle-nav li:first-child{border-top:none;}
+.moodle-nav li a.moodleMail:active,
+.moodle-nav li a.moodleMail:focus {
+    text-decoration: none;
+}

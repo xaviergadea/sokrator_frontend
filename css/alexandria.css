@@ -1,0 +1,46 @@
+/* CSS Document */
+.alxRegistre{min-height:60px; padding:10px;}
+.alxBSH{float:right; color:#36C; padding:15px 10px;}
+.alxNom{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;font-size:13px; color:#000; font-weight:300; margin-left:44px}
+.alxData{font-size:10px; float:right;}
+.alxSubject{color:#666;font-size:12px; margin-left:44px}
+.alx-nav {
+    /*position: absolute;
+    top: 0;
+    width: 100%;*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.alx-nav li {
+    /*text-indent: 20px;*/
+    line-height: 18px;
+	font-size:14px;
+	border-top: 1px solid rgba(0, 0, 0, .06);
+}
+.alx-nav li img{
+float:left;
+margin-right:12px;
+max-height:32px;
+}
+
+.alx-nav li a.alxRegistre {
+	
+    display: block;
+    text-decoration: none;
+    color: #272727;
+	padding:10px 20px 10px 15px;
+	overflow:auto;
+}
+
+.alx-nav li a.alxRegistre:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(31,33,47,0.1);
+}
+.alx-nav li:first-child{border-top:none;}
+.alx-nav li a.alxRegistre:active,
+.alx-nav li a.alxRegistre:focus {
+    text-decoration: none;
+}

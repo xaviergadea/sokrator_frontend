@@ -1,0 +1,95 @@
+<html>
+<head>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+    /*var domainname = 'http://insmontserrat.docus.info';
+    $.ajax(
+		{   type: 'GET',			
+			dataType : 'jsonp',
+			url: "http://insmontserrat.docus.info/login/token.php?username=usuaridocus&password=Cromlec00&service=moodle_mobile_app"
+		}
+	 ).done(function(response) {
+	  var token = response.token;
+	});;*/
+	var domainname = 'http://insmontserrat.docus.info';
+	var token='098fd9024a99383d61a30f490f8dc7a8'
+    var functionname = 'core_user_get_users';
+
+    var serverurl = domainname + '/webservice/rest/server.php';/*?wstoken='+ token +'&wsfunction='+functionname ;*/
+    //add params into data
+    var criteria = [{ 
+		 key:"username",
+		 value:"usuaridocus"
+	}];
+	/*username: 'testusername1',
+                            password: 'testpassword1',
+                            firstname: 'testfirstname1',
+                            lastname: 'testlastname1',
+                            email: 'testemail1@moodle.com',
+                            auth: 'manual',
+                            idnumber: 'testidnumber1',
+                            lang: 'en',
+                            theme: 'standard',
+                            timezone: '-12.5',
+                            mailformat: 0,
+                            description: 'Hello World!',
+                            city: 'testcity1',
+                            country: 'au',
+                            preferences: [
+                                {type: 'preference1', value: 'preferencevalue1'},
+                                {type: 'preference2', value: 'preferencevalue2'}
+                            ]*/
+                         /*,
+                         {  username: 'testusername2',
+                            password : 'testpassword2',
+                            firstname : 'testfirstname2',
+                            lastname : 'testlastname2',
+                            email : 'testemail2@moodle.com',
+                            timezone : 'Pacific/Port_Moresby'
+                         }*/
+                    
+					 
+	
+	//var userids =  Array([0]=>63) ; //user ID
+
+   // userids[0]=63;
+   /*var data = {
+		
+		userids: [
+			'61',
+			'63'
+		]
+	};*/
+	var params = {
+    //'userids[0]' : '63'		
+		"wstoken":token,
+		'wsfunction':functionname,
+		'criteria':criteria
+			
+    };
+	 /*var data = {
+                wstoken: token,
+                wsfunction: functionname,
+                moodlewsrestformat: 'json',
+                users: userstocreate
+                }*/
+	//var stringData = JSON.stringify( courseid );
+   var response=$.ajax(
+                            {   type: 'POST',
+                                data: params ,
+								dataType : 'json',
+                                url: serverurl
+                            }
+                         );
+    console.info(response);
+});
+</script>
+</head>
+<body>
+    Check your Javascript console for the "responseText" value.
+</body>
+</html>

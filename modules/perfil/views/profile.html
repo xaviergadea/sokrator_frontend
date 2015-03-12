@@ -1,0 +1,106 @@
+<div ng-controller="skeditprofile">
+<header class="navbar navbar-fixed-top cabesa">
+<div class="botonera">
+<a href="/skapps" class="pestana"><span class="fa fa-home">&nbsp;</span></a>
+<a href="/skconfig" class="pestana"><span class="fa fa-th">&nbsp;</span></a>
+<a href="javascript:void(0);" class="pestana Act"><span class="fa fa-user">&nbsp;</span></a>
+<a href="javascript:void(0);" id="initSearch" class="pestana"><span class="fa fa-search"></span></a>
+</div>
+<inituserprofile></inituserprofile>
+</header>
+    
+        <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+        
+     	<div class="iconesapp">
+      
+        <ul class="nav nav-pills nav-stacked iconesapp-list"  role="tablist" id="TabConfig">
+        <li class="active"><a href="#apps_integrated" data-toggle="tab">Perfil personal</a></li>
+                        
+        </ul>
+  	   </div>
+       
+       
+       
+       
+       
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        	<div id="page-content-wrapper">
+            	<div class="container-fluid">
+            	 
+            
+                <section class="settings ng-scope row">
+                    <!--<div class="u-avatar tooltipped" tooltip="Using Gravatar" style="background-image: url(https://gravatar.com/avatar/308b8be528f1f9aa47ec18c49641d5d1?d=mm)"><div class="tooltip">Using Gravatar</div></div>
+                    <h1 class="u-name ng-binding">xavier.gadea</h1>                    
+                -->
+                    
+                	<div class="tab-content usuariEdit">
+                        <div class="tab-pane active" id="apps_integrated">                           
+                            <form role="form" id="frmPerfil">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Nom</label>
+                                <input type="text" class="form-control" id="name" placeholder="Nom" ng-model="user.name">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="userPwd" placeholder="Password" ng-model="user.userPwd">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">E-mail</label>
+                                <input type="email" class="form-control" id="userName" placeholder="E-mail" ng-model="user.userName">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Data naixement</label>
+                                <input type="text" class="form-control" id="birthdate" name="birthdate" ng-model="user.birthdate"  placeholder="dd-MM-yyyy">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputFile">Puja la teva imatge</label>
+                                <input type="file" ng-file-select="onFileSelect($files)" multiple accept="image/*">
+                                
+                              </div>
+                              <div class="form-group">
+                              <div><label>Imatge de fons</label></div>
+                              <input type="radio" value="bg1.jpg" name="bgImg" ng-model="user.bgImg"/>
+                              <img src="./img/bg1.jpg" class="img-thumbnail" style="max-width:200px">
+                              <input type="radio" value="bg2.jpg" name="bgImg" ng-model="user.bgImg" />
+                              <img src="./img/bg2.jpg"  class="img-thumbnail" style="max-width:200px">
+                              <input type="radio" value="bg3.jpg" name="bgImg" ng-model="user.bgImg" />
+                              <img src="./img/bg3.jpg" class="img-thumbnail" style="max-width:200px">
+                              <input type="radio" value="bg4.jpg" name="bgImg" ng-model="user.bgImg" />
+                              <img src="./img/bg4.jpg" class="img-thumbnail" style="max-width:200px"> 
+                              <input type="radio" value="bg5.jpg" name="bgImg" ng-model="user.bgImg" />
+                              <img src="./img/bg5.jpg" class="img-thumbnail" style="max-width:200px"> 
+                              <input type="radio" value="bg6.jpg" name="bgImg" ng-model="user.bgImg" />
+                              <img src="./img/bg6.jpg" class="img-thumbnail" style="max-width:200px"> 
+                              <input type="radio" value="bg7.jpg" name="bgImg" ng-model="user.bgImg" />
+                              <img src="./img/bg7.jpg" class="img-thumbnail" style="max-width:200px"> 
+                              </div>
+                             <button ng-click="reset()">RESET</button>
+         					 <button ng-click="editUser($files)">SAVE</button>
+                            </form>
+                        </div>
+                        <div id="moodleParamsContent">
+                            
+                        </div>
+                        <div class="tab-pane" id="apps_notintegrated">
+                            <table class="table">
+                            	<tr ng-repeat="app in appsR">
+                               		<td width="50px"><i class="font-icon network-icon"><img src="{{url}}images/{{app.image}}"/></i></td>
+                                    <td><h4 class="title">{{app.name}}</h4><small>{{app.description}}</small></td>
+                                    <td><input type="checkbox" ng-checked="app.active" ng-click="(app.active) ? removeApp() : connectappRecomenades();">
+                                        <!--<button type="button" ng-class="{active: app.active}" class="btn btn-default">On</button>-->
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </div>
+                </section>
+               
+            </div>
+        </div>
+     </div>
+</div>

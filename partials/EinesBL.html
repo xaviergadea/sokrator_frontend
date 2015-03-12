@@ -1,0 +1,11 @@
+<div class="sidebar-brand fixed">
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-eye"></i></button>
+<img src="http://v1-back.sokrato.me/images/icBlogs.png" /> Blogs del centre</div><div class="panellapp">
+  <ul class="eines-nav">
+    <li ng-repeat="tool in toolsBL.appsRec | filter:searchText">
+      <a ng-href="{{tool.linkR}}" target="_blank" class="einesRegistre"><div class="einesIco"><img src="http://v1-back.sokrato.me/images/{{tool.imageR}}" alt="{{tool.linkR}}" class="img-thumbnail"></div>
+      <div class="einesNom">{{tool.nameR}}</div>
+      <div class="einesSubject">{{tool.descriptionR}}</div></a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,112 @@
+<div ng-controller="skappConnect">
+<header class="navbar navbar-fixed-top cabesa">
+<a href="#menu-toggle" id="menu-toggle" class="pestana"><span class="fa fa-gear">&nbsp;</span></a>
+<a href="#" class="usuari"><img src="img/profile1.jpg" width="49" height="49"></a>
+</header>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+        	
+            
+       
+       
+       
+       <div class="iconesapp">
+      
+        <ul class="iconesapp-list">
+            
+            <!--<a href="#" ng-repeat="app in apps" ng-hide="{{!app.active}}" ng-click="viewFilesapp()" ><li>
+              <span class="icones"><img src="{{url}}images/{{app.image}}"/></span>
+            </li></a>-->
+            
+            <a href="#" ng-repeat="app in apps" ng-click="connectapp();"><li>
+              <span class="icones"><img src="{{url}}images/{{app.image}}"/></span>
+            </li></a>
+            
+           
+        </ul>
+  	   </div>
+       
+       
+       
+       
+       
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+        
+            <div class="container-fluid">
+            	 <div class="row">
+                 <div class="col-lg-12">
+                 	<div class="cercador">
+                 	<div class="row">
+                    	<div class="col-md-6 col-md-offset-3">
+                        <form role="form">
+                        <div class="input-group">
+                          <input type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                          </span>
+                        </div><!-- /input-group -->
+                        </form>
+                    	</div>
+                    </div>
+                    </div>                 
+                 </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="pager" id="panells">
+                          <a href="#" ><i class="fa fa-square"></i></a>
+                          <a href="#" class="actiu" ><i class="fa fa-square"></i></a>
+                          <a href="#" ><i class="fa fa-square"></i></a>
+                          <a href="#" ><i class="fa fa-square"></i></a>
+                          <a href="#" class="mespanell" ><i class="fa fa-plus"></i></a>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 panelera">
+                    	<div class="panellapp">
+                        	<ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">Google Drive</a>
+                </li>
+                <li ng-repeat="file in files">
+                    <a ng-href="{{file.alternateLink}}" target="_blank">aaa{{file.title}}</a>
+                </li>
+                
+            </ul>
+                        
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 panelera">
+                    	<div class="panellapp">
+                        
+                        <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">Gmail</a>
+                </li>
+                <li ng-repeat="mail in mails">
+                	<div ng-repeat="mailItem in mail.payload.headers"><small ng-hide="{{mailItem.name!='From'}}">{{mailItem.value}}</small> | <small  ng-hide="{{mailItem.name!='Date'}}">{{mailItem.value}}</small></div>
+                    <div ng-repeat="mailItem in mail.payload.headers" ng-hide="{{mailItem.name!='Subject'}}">{{mailItem.value}}</div>
+                </li>
+                
+            </ul>
+                        
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 panelera">
+                    	<div class="panellapp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+ </div>
+</div>

@@ -1,0 +1,30 @@
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+       <form role="form" novalidate ng-controller="NewUserCtrl">
+          <div class="form-group">
+            <label for="exampleInputNom">Nom personal</label>
+            <input type="text" class="form-control" id="name" name="name" ng-model="form.name" placeholder="Nom">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nom usuari (email)</label>
+            <input type="email" class="form-control" id="userName" name="userName" ng-model="form.userName" placeholder="Usuari (Email)">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>                      
+            <input type="password" class="form-control" id="userPwd" name="userPwd" ng-model="form.userPwd" placeholder="Password">
+          </div>  
+          <div class="form-group">
+
+              <label for="birthdate">Data naixement</label>                      
+            <input type="date" class="form-control" id="birthdate" name="birthdate" ng-model="form.birthdate"  placeholder="yyyy-MM-dd">
+          </div>                   
+           <div class="checkbox">
+            <label for="isAdmin">Admintrador</label>
+              <input type="checkbox" name="isAdmin" ng-model="form.isAdmin"> 
+            </label>
+          </div>                   
+          <button ng-click="reset()">RESET</button>
+          <button ng-click="newUser()">SAVE</button>
+        </form>
+
+</div>

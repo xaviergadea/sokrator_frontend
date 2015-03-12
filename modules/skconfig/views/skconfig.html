@@ -1,0 +1,92 @@
+<div ng-controller="skappConfig">
+<header class="navbar navbar-fixed-top cabesa">
+<div class="botonera">
+<a href="skapps" class="pestana"><span class="fa fa-home">&nbsp;</span></a>
+<a href="javascript:void(0);" class="pestana Act"><span class="fa fa-th">&nbsp;</span></a>
+<a href="skprofile" class="pestana"><span class="fa fa-user">&nbsp;</span></a>
+<a href="javascript:void(0);" id="initSearch" class="pestana"><span class="fa fa-search"></span></a>
+</div>
+<inituserprofile></inituserprofile>
+</header>
+
+    
+        <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+        
+     	<div class="iconesapp">
+      
+        <ul class="nav nav-pills nav-stacked iconesapp-list"  role="tablist" id="TabConfig">
+        <li class="active"><a href="#apps_integrated" data-toggle="tab">Aplicacions integrades</a></li>
+                        <li><a href="#apps_notintegrated" data-toggle="tab">Aplicacions recomanades</a></li>
+        </ul>
+  	   </div>
+       
+       
+       
+       
+       
+        </div>
+        <!-- /#sidebar-wrapper -->
+        	<div id="page-content-wrapper">
+            	<div class="container-fluid">
+            	 
+            
+                <section class="settings ng-scope row">
+                    <!--<div class="u-avatar tooltipped" tooltip="Using Gravatar" style="background-image: url(https://gravatar.com/avatar/308b8be528f1f9aa47ec18c49641d5d1?d=mm)"><div class="tooltip">Using Gravatar</div></div>
+                    <h1 class="u-name ng-binding">xavier.gadea</h1>                    
+                -->
+                    
+                	<div class="tab-content">
+                        <div class="tab-pane active" id="apps_integrated">                           
+                            <table class="table">
+                            	<tr ng-repeat="app in apps" class="active">
+                               		<td width="50px"><i class="font-icon network-icon"><img src="{{url}}images/{{app.image}}"/></i></td>
+                                    <td><h4 class="title">{{app.name}}</h4><small>{{app.description}}</small></td>
+                                    <td><input type="checkbox" ng-checked="app.active" ng-click="(app.active) ? removeApp() : connectapp();">
+                                        <!--<button type="button" ng-class="{active: app.active}" class="btn btn-default">On</button>-->
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                        <div id="moodleParamsContent">
+                            
+                        </div>
+                        <div class="tab-pane" id="apps_notintegrated">
+                            <table class="table">
+                            	<tr ng-repeat="app in appsR" class="active">
+                               		<td width="50px"><i class="font-icon network-icon"><img src="{{url}}images/{{app.image}}"/></i></td>
+                                    <td><h4 class="title">{{app.name}}</h4><small>{{app.description}}</small></td>
+                                    <td><input type="checkbox" ng-checked="app.active" ng-click="(app.active) ? removeApp() : connectappRecomenades();">
+                                        <!--<button type="button" ng-class="{active: app.active}" class="btn btn-default">On</button>-->
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                <!--<div class="row">
+                    <div class="col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3">
+                    	<div class="panellapps">
+                        	<ul class="sidebar-nav">
+                                <li class="sidebar-brand">
+                                    <a href="#">Aplicacions</a>
+                                </li>
+                                <li ng-repeat="app in apps">
+                                	<img src="{{url}}images/{{app.image}}"/>
+                                    <a href="javascript:void(0)" target="_blank" ng-click="connectapp()"></a>
+                                </li>
+                                
+                            </ul>
+                        
+                        </div>
+                    </div>
+                    
+                    
+                </div>-->
+            </div>
+        </div>
+     </div>
+</div>

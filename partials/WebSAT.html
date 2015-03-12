@@ -1,0 +1,389 @@
+<div class="sidebar-brand">
+  <button class="btn btn-link btn-xs pull-right" ng-click="AcessWebSAT();"><i class="fa fa-external-link"></i></button>
+  <button class="btn btn-link btn-xs pull-right" ng-click="changeSATView();"><i class="fa fa-eye"></i></button>
+  <button class="btn btn-link btn-xs pull-right" ng-click="RefreshWebSAT();"><i class="fa fa-refresh"></i></button>
+  <img src="http://v1-back.sokrato.me/images/icWebSat.png" />SAU SK</div>
+<div class="panellapp">
+  <div id="WebSAT_last_issues">
+    <div class="accordion" id="accordion2">
+      <div class="accordion-group">
+        <table class="table table-striped" id="WEBSATTable">
+          <tbody>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(277)" href="javascript:void(0);">
+                  <div class="row">                  	
+                    <div class="col-md-12">14-01-2015&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;3 - Alta</div>
+                    <div class="col-md-12">Alliance Française Madrid (Marta)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse277" ng-show="collapse277">
+                  <div class="accordion-inner">
+                    <p>WebSat: Análisis</p>
+                    <p>Incidencias por entidad (no cliente)</p>
+                    <ul>
+                      <li>Total incidencias</li>
+                      <li>Columnas incidencias (estados + total) + Municipio / País / Teléfono / Mail</li>
+                      <li>+ tiempo medio de resolución (diferencia suma petición / cierre / incidencias) (antes de municipio)</li>
+                    </ul>
+                    <p>Incidencias por producto</p>
+                    <ul>
+                      <li>ïdem intervenciones &nbsp;pero por incidencias (</li>
+                    </ul>
+                    <p>Intervenciones por producto / año (nueva consulta)</p>
+                    <ul>
+                      <li>NEcesario incorporar pendientes / en curso / cerradas / total / tiempo medio</li>
+                    </ul>
+                    <p>Intervenciones por entidad / año (nueva)</p>
+                    <p>En exportación incidencias&nbsp;xls&nbsp;</p>
+                    <ul>
+                      <li>sale petición-- debería ser incidencias</li>
+                      <li>Orden correcto de los campos</li>
+                    </ul>
+                    <p></p>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(508)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">13-01-2015&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;2 - Normal</div>
+                    <div class="col-md-12">Cromlec Digital SL (pep)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse508" ng-show="collapse508">
+                  <div class="accordion-inner">
+                    <p>Alphacontrol pedidos.</p>
+                    <p>Fase 1: construcción de interfase de pedidos para Auge, Cromlec... contra SOkrator .....</p>
+                    <p>Fase 2: adaptaciosper a cosnulta dels majoristes</p>
+                    <p>Fase 3: adaptacions per envio d'info als resellers (per part dels majoristes o directament)</p>
+                    <p>(en parlem)</p>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Campos
+                            del formulario de pedidos</td>
+                        </tr>
+                        <tr>
+                          <td><a href="http://www.alphacontrol.es/pedidos">www.alphacontrol.es/pedidos</a></td>
+                        </tr>
+                        <tr>
+                          <td>Tipo</td>
+                          <td>Valores</td>
+                        </tr>
+                        <tr>
+                          <td>Fecha pedido</td>
+                        </tr>
+                        <tr>
+                          <td>Nº Pedido</td>
+                          <td>Automatic</td>
+                        </tr>
+                        <tr>
+                          <td>Territorio</td>
+                          <td>Spain / Colombia /
+                            Chile / Brazil / Panamá / Portugal...)</td>
+                        </tr>
+                        <tr>
+                          <td>ID May./ Gran
+                            Distrib.</td>
+                        </tr>
+                        <tr>
+                          <td>May./ Gran
+                            Distrib.</td>
+                          <td>Campo vinculado a ID</td>
+                          <td>Auge / Cromlec Suport
+                            /&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>ID
+                            Intermediario</td>
+                          <td>Campo vinculado a ID</td>
+                        </tr>
+                        <tr>
+                          <td>Intermediario</td>
+                          <td>Soluzion Digital -
+                            Zbitt</td>
+                        </tr>
+                        <tr>
+                          <td>ID Reseller</td>
+                          <td>Campo vinculado a ID</td>
+                        </tr>
+                        <tr>
+                          <td>Reseller</td>
+                          <td>A dados de alta por
+                            nosotros : 20</td>
+                        </tr>
+                        <tr>
+                          <td>ID Cliente
+                            final</td>
+                          <td>(de momento no
+                            operativo)</td>
+                        </tr>
+                        <tr>
+                          <td>Cliente final</td>
+                          <td>Texto</td>
+                        </tr>
+                        <tr>
+                          <td>User AC</td>
+                          <td>Texto</td>
+                        </tr>
+                        <tr>
+                          <td>Fecha pedido a
+                            ATERA</td>
+                          <td>No visible</td>
+                        </tr>
+                        <tr>
+                          <td>Fecha entrega</td>
+                          <td>No visible</td>
+                        </tr>
+                        <tr>
+                          <td>Fecha
+                            Activación</td>
+                          <td>Fecha/ data</td>
+                        </tr>
+                        <tr>
+                          <td>Periodo de
+                            renovación</td>
+                          <td>número</td>
+                          <td>en meses</td>
+                        </tr>
+                        <tr>
+                          <td>Fecha
+                            Renovación</td>
+                          <td>Automatico</td>
+                        </tr>
+                        <tr>
+                          <td>Concepto
+                            Pedido</td>
+                          <td>(revisión mensual /
+                            Nuevo Pedido / Devolución....</td>
+                        </tr>
+                        <tr>
+                          <td>ID Producto</td>
+                          <td>Facilito lista</td>
+                        </tr>
+                        <tr>
+                          <td>Producto</td>
+                          <td>Campo vinculado a ID</td>
+                        </tr>
+                        <tr>
+                          <td>ID Artículo</td>
+                          <td>Facilito lista</td>
+                        </tr>
+                        <tr>
+                          <td>Artículo
+                            (Oferta...)</td>
+                          <td>Campo vinculado a ID</td>
+                        </tr>
+                        <tr>
+                          <td>Packs</td>
+                        </tr>
+                        <tr>
+                          <td>Cantidad</td>
+                        </tr>
+                        <tr>
+                          <td>Precio unidad</td>
+                          <td>Campo vinculado a ID
+                            artículo</td>
+                        </tr>
+                        <tr>
+                          <td>Precio total</td>
+                        </tr>
+                        <tr>
+                          <td>Coste May./
+                            Gran Distrib.</td>
+                          <td>No visible</td>
+                        </tr>
+                        <tr>
+                          <td>Coste Sokrator</td>
+                          <td>No visible</td>
+                        </tr>
+                        <tr>
+                          <td>Observaciones</td>
+                          <td>Texto</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse" ng-click="toggleSAT(646)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">04-03-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;1 - Baja</div>
+                    <div class="col-md-12">Institut Montserrat (Joan Fonollosa)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse646" ng-show="collapse646">
+                  <div class="accordion-inner">
+                    <p>posar el subtotal de compra en el full de comanda agrupat per proveidor. pot ser en un quadre a aprt a la part inferior del full.</p>
+                    <p><br>
+                    </p>
+                  </div>
+                </div></td>
+            </tr>            
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(954)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">16-09-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;1 - Baja</div>
+                    <div class="col-md-12">Escola El Puig (Hector Martinez)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse954" ng-show="collapse954">
+                  <div class="accordion-inner">
+                    <p>fer ilimitat el camp de notes per la comanda a diogenes</p>
+                    <p><br>
+                    </p>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(1049)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">31-10-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;2 - Normal</div>
+                    <div class="col-md-12">Cromlec Digital SL (pep)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse1049" ng-show="collapse1049">
+                  <div class="accordion-inner">
+                    <p>WebSau - WebSat ´Infomedia (per Betania Patmos)</p>
+                    <p>1. Cal pestanya lateral tipus Support amb nom Comunicacions.</p>
+                    <p>Obre formulari on tothom des de panell sokrator pot entrar noticies.</p>
+                    <p><span style="line-height: 1.45em; background-color: initial;">Emissor / Mail emissor / Títol / Breu / Cos / Enllaç / Comentari</span></p>
+                    <p><span style="line-height: 1.45em; background-color: initial;">2. Cal que desde Minimax, Alexandria...i webSau (adm) opció per enviar info a Infomedia ( o ho fem tot automatizat)</span></p>
+                    <p>I des dels blocs? com podria fer-ho (wordpress, blogger....). Sovint tenen embeds</p>
+                    <p><br>
+                    </p>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(1105)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">21-11-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;2 - Normal</div>
+                    <div class="col-md-12">Institut Tremp (Gloria)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse1105" ng-show="collapse1105">
+                  <div class="accordion-inner">
+                    <p>Duran - formació ocntínua</p>
+                    <p>Preparar plataforma nova per a projecte Formació contínua.</p>
+                    <p>enllaça amb peces webins, facebook (i twitter?</p>
+                    <p>tb webSec.</p>
+                    <p>La idea és ensenyar-ho a Balmes, viladoms i consorci mínim</p>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(1106)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">21-11-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;3 - Alta</div>
+                    <div class="col-md-12">Cromlec Digital SL (pep)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse1106" ng-show="collapse1106">
+                  <div class="accordion-inner">
+                    <p>MeMatrix:d</p>
+                    <p>preparar platforms per la gent de Cromlec.</p>
+                    <p>Pep etc...per adonar-nos de les avantatges i inconvenients.</p>
+                    <p>Possible platafomr aper la Judit, romero i duran.</p>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(1112)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">21-11-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;2 - Normal</div>
+                    <div class="col-md-12">Cromlec Digital SL (pep)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse1112"  ng-show="collapse1112">
+                  <div class="accordion-inner">
+                    <p>MeMatrix (Pep)</p>
+                    <p>clàssiques més peces d'ara del sokrator (alexandria etc...) + YOUTUBE (parametritzar canal) + ZURMO (còpia EEC per a Sokrator)</p>
+                    <p><span style="line-height: 1.45em; background-color: initial;">Caldrà migrar zoho a zurmo</span></p>
+                    <p>+ dirigir registres de alphacontrol, tocatdelbolet, roses, i mematrix (procedència) a zurmo.</p>
+                    <p><br>
+                    </p>
+                    <p><br>
+                    </p>
+                    <p><br>
+                    </p>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(1115)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">21-11-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;2 - Normal</div>
+                    <div class="col-md-12">Ordine della Compagnia di Maria Nostra Signora (Maria)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse1115" ng-show="collapse1115">
+                  <div class="accordion-inner">
+                    <p>WebSau:</p>
+                    <p>quan un supervisor reb avís de petició haruia de poder:</p>
+                    <p></p>
+                    <ul>
+                      <li><span style="line-height: 1.45em; background-color: initial;">anar a l'alexandria des del mail (per fer les degudes intervencions P.E.)</span></li>
+                      <li><span style="line-height: 1.45em; background-color: initial;">acceptar la incidència des del mail.</span></li>
+                    </ul>
+                    <p></p>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(1117)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">24-11-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;1 - Baja</div>
+                    <div class="col-md-12">Institut Français Bcn (Elena)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse1117" ng-show="collapse1117">
+                  <div class="accordion-inner">
+                    <p>he tancat una incidencia i tenia dues intervencions obertes. me la ha deixat tancar, cosa que creec que no es correcte. hauria de dir que te intervencions obertes, o tancar toes les intervencions obertes,no?</p>
+                    <p><br>
+                    </p>
+                    <p><br>
+                    </p>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><div class="accordion-heading"><a class="accordion-toggle" ng-click="toggleSAT(1122)" href="javascript:void(0);">
+                  <div class="row">
+                    <div class="col-md-12">24-11-2014&nbsp;&nbsp;<b>Prioridad</b>:&nbsp;2 - Normal</div>
+                    <div class="col-md-12">Cromlec Digital SL (Joan Alay)</div>
+                  </div>
+                  </a></div>
+                <div id="collapse1122" ng-show="collapse1122">
+                  <div class="accordion-inner">
+                    <p>Client: XATIC</p>
+                    <p>De cara &nbsp;aquest dijous al matí caldria &nbsp;implementar tal com s'ha fet a la web de CMU Lestonnac la possibiltat de poder enviar &nbsp;tant les entrades del Blog com les activitats de la web de xatic.</p>
+                    <p><a href="http://www.xatic.cat/">http://www.xatic.cat/</a></p>
+                    <p><a href="http://www.xatic.cat/butlleti/index.php?id_butlleti=3">http://www.xatic.cat/butlleti/index.php?id_butlleti=3</a></p>
+                    <p><a href="http://xatic.sokrator.com/">http://xatic.sokrator.com/</a></p>
+                    <p>xatic</p>
+                    <p>xatic00</p>
+                    <p>Gràcies</p>
+                    <p><br>
+                    </p>
+                  </div>
+                </div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <form name="validaHipatia" id="validaHipatia" method="post" action="http://www.rocus.net/hipatia_login/sokrator_login.php" target="_blank">
+        <input type="hidden" name="SES_ID" id="SES_ID" value="71957044">
+        <input type="hidden" name="username" value="cromlec">
+        <input type="hidden" name="password" value="cr0ml3c">
+        <input type="hidden" name="Servicio" value="1">
+        <input type="hidden" name="SrvIdClient" value="1">
+        <input type="hidden" name="idServei" value="1">
+        <input type="hidden" name="id_conex" value="243">
+        <input type="hidden" name="DOMAIN" value="cromlec.sokrator.com">
+        
+      </form>
+    </div>
+    </div>
+</div>

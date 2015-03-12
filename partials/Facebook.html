@@ -1,0 +1,34 @@
+<div class="sidebar-brand">
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-external-link"></i></button>
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-gear"></i></button>
+<button class="btn btn-link btn-xs pull-right"><i class="fa fa-eye"></i></button>
+<button class="btn btn-link btn-xs pull-right" ng-click="RefreshFacebook();"><i class="fa fa-refresh"></i></button>
+<img src="http://v1-back.sokrato.me/images/icFacebook.png" />Facebook</div>
+<div class="panellapp">
+	<ul class="facebook-nav"> 
+    	<img id="spinnerFacebook" ng-src="img/spinner.gif">
+    	<li ng-repeat="FBItem in FBItems | filter:searchText" ng-show="{{FBItem.type!='status'}}" class="facebookPost">
+            <div ng-show="'{{FBItem.link}}'" class="facebookBSH"><a href="{{FBItem.link}}" target="_blank" class="fa fa-external-link-square text-info"></a></div>
+                <div class="facebookRemitent">{{FBItem.from.name}}</div>
+                <div ng-hide="{{FBItem.story==''}}" class="facebookStory">{{FBItem.story}}</div>
+                <div ng-hide="{{FBItem.message==''}}" class="facebookMessage">{{FBItem.message}}</div>
+                                
+                <div ng-show="{{FBItem.type=='photo'}}" class="facebookFoto"><a class="_4-eo _2t9n _50z9" href="{{FBItem.link}}" target="_blank" rel="theater" style="max-width:427px;"><img class="_46-i img" src="http://graph.facebook.com/{{FBItem.object_id}}/picture?type=normal&redirect=true" style="left:-5px; top:0px;" alt="{{FBItem.name}}" /></a></div>
+                <div ng-show="{{FBItem.type=='link'}}" class="facebookFoto"><a class="_4-eo _2t9n _50z9" href="{{FBItem.link}}" target="_blank" rel="theater" style="max-width:427px;">{{FBItem.name}}</a><br /><small>{{FBItem.description}}</small></div>
+                <div ng-show="{{FBItem.type=='video'}}" class="facebookVideo">
+                
+                <object height="224" data="https://www.facebook.com/video/embed?video_id={{FBItem.object_id}}"> 
+                 <param name="allowfullscreen" value="true" /> 
+                 <param name="allowscriptaccess" value="always" /> 
+                 <param name="movie" value="{{FBItem.source}}" /> 
+                 <param name="autoplay" value="false">
+  				 <param name="autoStart" value="0">
+                 <embed embed-src="https://www.facebook.com/video/embed?video_id={{FBItem.object_id}}" allowscriptaccess="always" allowfullscreen="true" width="400" height="224"> 
+                 </embed> 
+                </object> 
+                
+                </div>
+                
+        </li>
+    </ul>
+</div>

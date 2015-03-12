@@ -1,0 +1,40 @@
+/* CSS Document */
+.gmailMail{}
+.gmailBSH{float:right; color:#36C; padding:15px 10px;}
+.gmailRemitent{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;font-size:14px; color:#000; font-weight:500;}
+.gmailData{font-size:10px; float:right;}
+.gmailSubject{color:#666;font-size:12px;}
+.gmail-nav {
+    /*position: absolute;
+    top: 0;
+    width: 100%;*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gmail-nav li {
+    /*text-indent: 20px;*/
+    line-height: 18px;
+	font-size:14px;
+	border-top: 1px solid rgba(0, 0, 0, .06);
+}
+
+.gmail-nav li a.gmailMail {
+	
+    display: block;
+    text-decoration: none;
+    color: #272727;
+	padding:10px 20px 10px 15px;
+}
+
+.gmail-nav li a.gmailMail:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(31,33,47,0.1);
+}
+.gmail-nav li:first-child{border-top:none;}
+.gmail-nav li a.gmailMail:active,
+.gmail-nav li a.gmailMail:focus {
+    text-decoration: none;
+}

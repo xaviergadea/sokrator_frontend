@@ -1,0 +1,12 @@
+<div class="sidebar-brand">
+  <button class="btn btn-link btn-xs pull-right"><i class="fa fa-external-link"></i></button>
+  <button class="btn btn-link btn-xs pull-right"><i class="fa fa-gear"></i></button>
+  <button class="btn btn-link btn-xs pull-right"><i class="fa fa-eye"></i></button>
+  <button class="btn btn-link btn-xs pull-right" ng-click="RefreshGDrive();"><i class="fa fa-refresh"></i></button>
+  <img src="http://v1-back.sokrato.me/images/icGDrive.png" /> Google Drive</div>
+<div class="panellapp">
+  <ul class="sidebar-nav">
+  <img id="spinnerGDrive" ng-src="img/spinner.gif">
+    <li ng-repeat="file in files | filter:searchText"><a ng-href="{{file.alternateLink}}" target="_blank">{{file.title}}</a></li>
+  </ul>
+</div>

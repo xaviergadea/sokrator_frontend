@@ -1,0 +1,42 @@
+/* CSS Document */
+a.accordion-toggle:hover{ background: rgba(31,33,47,0.1) !important;}
+a.accordion-toggle{display: block;}
+.websatMail{}
+.websatBSH{float:right; color:#36C; padding:15px 10px;}
+.websatRemitent{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;font-size:14px; color:#000; font-weight:500;}
+.websatData{font-size:10px; float:right;}
+.websatSubject{color:#666;font-size:12px;}
+.websat-nav {
+    /*position: absolute;
+    top: 0;
+    width: 100%;*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.websat-nav li {
+    /*text-indent: 20px;*/
+    line-height: 18px;
+	font-size:14px;
+	border-top: 1px solid rgba(0, 0, 0, .06);
+}
+
+.websat-nav li a.websatMail {
+	
+    display: block;
+    text-decoration: none;
+    color: #272727;
+	padding:10px 20px 10px 15px;
+}
+
+.websat-nav li a.websatMail:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(31,33,47,0.1);
+}
+.websat-nav li:first-child{border-top:none;}
+.websat-nav li a.websatMail:active,
+.websat-nav li a.websatMail:focus {
+    text-decoration: none;
+}

@@ -1,0 +1,122 @@
+<div class="sidebar-brand">
+<button class="btn btn-link btn-xs pull-right" ng-click="newFavourite();"><i class="fa fa-gear"></i></button>
+<button class="btn btn-link btn-xs pull-right" ng-click="changeCategoryFavourites();"><i class="fa fa-eye"></i></button>
+<img src="http://v1-back.sokrato.me/images/icFavoritos.png" />Favourites</div>
+<div class="panellapp">
+	<ul class="facebook-nav"> 
+    	<li ng-repeat="FavouriteItem in FavouriteItems | filter:searchText" class="facebookPost">
+            <a ng-href="{{FavouriteItem.Favlink}}" target="_blank">{{FavouriteItem.Favname}}</a>
+            <div class="facebookBSH"><a href="{{FavouriteItem.Favlink}}" target="_blank" class="fa fa-external-link-square text-info"></a></div>
+            <div class="facebookBSH" style="margin-right:10px"><a href="javascript:void(0)" ng-click="editFavourite();" target="_blank" class="fa fa-edit text-info" title="Modificar"></a></div>
+            <div class="facebookBSH" style="margin-right:10px"><a href="javascript:void(0)" ng-click="deleteFavourite();" target="_blank" class="fa fa-times text-info" title="Esborrar"></a></div>
+            </li>
+    </ul>
+</div>
+<div class="modal fade" id="divnewFavourite">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Tancar</span></button>
+        <h4 class="modal-title">Afegeix enlla&ccedil;os</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" class="FormFavourites" id="FormFavourites">
+          <!--<input type="hidden" name="routeAuth" id="routeAuth" />-->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nom de l'enlla&ccedil;</label>
+            <input type="text" required="required" class="form-control" id="favouritename" placeholder="Nom de l'enlla&ccedil;">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Link</label>
+            <input type="text" required="required" class="form-control" id="favouritelink" placeholder="Enllaç">
+          </div>
+         <div class="form-group">
+            <label for="selectedTestAccount">Categoria</label>
+            <div class="input-group">
+            <select ng-model="selectedTestAccount" class="form-control" ng-options="x as x.FavCategory for x in FavouriteCategories track by x._id">
+    			<option value="">Categories</option>
+			</select>
+            
+            <span class="input-group-addon btn btn-info" ng-click="NewFavouriteCategory();">+</span>
+            </div>
+            
+          </div>
+          <div class="form-group" style="display:none" id="DivNewFavouriteCategory">
+            <label for="newFavouriteCategory">Nova categoria</label>
+            <input type="text" required="required" class="form-control" id="newFavouriteCategory" placeholder="Categoria">
+            <span class="input-group-addon btn btn-info" ng-click="SaveFavouriteCategory();">Ok</span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tancar</button>
+        <button type="submit" id="btOkNewFavourite" class="btn btn-primary">Activar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="divChangeFavouritesCategory">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Tancar</span></button>
+        <h4 class="modal-title">Canvia categoria</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="facebook-nav"> 
+        	<li class="facebookPost" style="background-color:#e2e4e6"><a ng-click='changeFavouriteview()' href="javascript:;" target="_blank">Veure'ls tots</a>   </li>
+            <li ng-repeat="fav in FavouriteCategories" class="facebookPost">
+            	<a ng-click='changeFavouriteview()' href="javascript:;" target="_blank">{{fav.FavCategory}}</a>   
+            </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tancar</button>
+        <!--<button type="submit" id="btOkNewRSS" class="btn btn-primary">Activar</button>-->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="diveditFavourite">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Tancar</span></button>
+        <h4 class="modal-title">Modificar enlla&ccedil;os</h4>
+      </div>
+      <div class="modal-body" ng-repeat="favEditItem in favEdit">
+        <form role="form" class="FormEditFavourites" id="FormEditFavourites">
+          <!--<input type="hidden" name="routeAuth" id="routeAuth" />-->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nom de l'enlla&ccedil;</label>
+            <input type="text" required="required" class="form-control" id="favouritename" value="{{favEditItem.Favname}}" placeholder="Nom de l'enlla&ccedil;">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Link</label>
+            <input type="text" required="required" class="form-control" id="favouritelink" value="{{favEditItem.Favlink}}" placeholder="Enllaç">
+          </div>
+         <div class="form-group">
+            <label for="selectedTestAccount">Categoria</label>
+            <div class="input-group">
+            <select ng-model="selectedFavourite" class="form-control" ng-options="x as x.FavCategory for x in FavouriteCategories track by x._id">
+    			<option value="">Categories</option>
+			</select>
+            
+            <span class="input-group-addon btn btn-info" ng-click="NewFavouriteCategory();">+</span>
+            </div>
+            
+          </div>
+          <div class="form-group" style="display:none" id="DivNewFavouriteCategory">
+            <label for="newFavouriteCategory">Nova categoria</label>
+            <input type="text" required="required" class="form-control" id="newFavouriteCategory" placeholder="Categoria">
+            <span class="input-group-addon btn btn-info" ng-click="SaveFavouriteCategory();">Ok</span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tancar</button>
+        <button type="submit" id="btOkEditFavourite" class="btn btn-primary">Guardar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
