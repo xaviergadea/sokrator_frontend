@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "name": "Mematrix",
+  "description": "Mematrix ecosistema virtual",
+  "version": "1.0.0",
+  "homepage": "http://v2.sokrato.me/",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -11,8 +11,8 @@
     "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
     "angular-moment": "~0.7.0",
-	  "ng-file-upload-shim",
-	  "ng-file-upload",
+	  "ng-file-upload-shim": "3.2.4",
+	  "ng-file-upload":"3.2.4",
     "ng-sortable": "^1.0.0",
     "angular-cookies": "^1.0.0",
     "angular-linkify": "1.0.0",
